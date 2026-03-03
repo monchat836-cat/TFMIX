@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFMIX 转换工具</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f6f8fa;
+        }
+        h1 {
+            color: #24292e;
+            text-align: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            font-family: monospace;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .output {
+            margin-top: 20px;
+            white-space: pre-wrap;
+            background: #f6f8fa;
+            padding: 15px;
+            border: 1px dashed #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎵 TFMIX 乐谱转换工具</h1>
+        
+        <textarea id="input" placeholder="请在这里粘贴您的原始乐谱数据..."></textarea>
+        
+        <button onclick="convert()">转换为 TFMIX 格式</button>
+        
+        <div class="output" id="output">
+            <!-- 转换后的结果会显示在这里 -->
+        </div>
+    </div>
+
+    <script>
+        function convert() {
+            // 1. 获取用户输入的文本
+            var inputText = document.getElementById('input').value;
+            
+            // 2. 这里是简单的处理逻辑（示例）
+            // 实际上你需要根据 TFMIX 的具体规则来编写转换算法
+            // 目前我们先做一个简单的“回显”或者“大写转换”作为演示
+            var result = "【处理中...】\n\n";
+            result += "检测到输入内容长度: " + inputText.length + " 个字符\n";
+            result += "--------------------------------\n";
+            result += "原始内容:\n" + inputText;
+            
+            // 3. 显示结果
+            document.getElementById('output').innerText = result;
+        }
+    </script>
+</body>
+</html>
